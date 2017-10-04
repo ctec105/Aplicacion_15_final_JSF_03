@@ -11,26 +11,28 @@
 	<ui:composition template="/plantillas/plantilla.xhtml">
 		<ui:define name="body">
 			<h2>Resultado</h2>
-			<h:panelGrid columns="2">
-				<h:outputLabel value="Nombre" />
-				<h:outputText value="#{formulario.empleado.nombre}"/>
+			<h:form id="form" styleClass="form">
+				<h:panelGrid columns="2" styleClass="table">
+					<h:outputLabel value="Nombre" />
+					<h:outputText value="#{formulario.empleado.nombre}" />
 
-				<h:outputLabel value="Apellido" />
-				<h:outputText value="#{formulario.empleado.apellido}" />
+					<h:outputLabel value="Apellido" />
+					<h:outputText value="#{formulario.empleado.apellido}" />
 
-				<h:outputLabel value="Area" />
-				<h:outputText value="#{formulario.empleado.area}" />
+					<h:outputLabel value="Area" />
+					<h:outputText value="#{formulario.empleado.area}" />
 
-				<h:outputLabel value="Edad" />
-				<h:outputText value="#{formulario.empleado.edad}" />
+					<h:outputLabel value="Edad" />
+					<h:outputText value="#{formulario.empleado.edad}" />
 
-				<h:outputLabel value="Fecha Ingreso" />
-				<h:outputText value="#{formulario.empleado.fechaIngreso}">
-					<f:convertDateTime pattern="dd/MM/yyyy" />
-				</h:outputText>
-			</h:panelGrid>
-			
-			<h:messages />
+					<h:outputLabel value="Fecha Ingreso" />
+					<h:outputText value="#{formulario.empleado.fechaIngreso}">
+						<f:convertDateTime pattern="dd/MM/yyyy" />
+					</h:outputText>
+				</h:panelGrid>
+
+				<h:messages />
+			</h:form>
 		</ui:define>
 	</ui:composition>
 </h:body>

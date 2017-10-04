@@ -1,80 +1,45 @@
-.tabla {
-	border: solid 2px #2E2EFE;
-	border-collapse: collapse;
-	color: #424242;
-	font-weight: bold;
+.form {
+	width: 25%;
+	border: 1px solid #ccc;
+	margin: 20px;
+	padding: 20px;
 }
 
-.cabeceraTabla {
-	color: #FFFFFF;
-	background: #0080FF;
-	padding: 5px;
-}
-
-.fila1 {
-	text-align: center;
-	background: #FFFFFF;
-}
-
-.fila2 {
-	text-align: center;
-	background: #EFEFFB;
-	border: solid 2px #2E2EFE;
+.table {
+	width: 100%;
 }
 
 .msjError {
 	color: #FF0000;
-	font-weight: bold;
 	margin: 0px 0px 0px 15px;
 }
 
-.form {
-	border: solid 2px #2E2EFE;
-	width: 800px;
-	padding: 20px;
+h2 {
+	margin: 15px 0px 0px 15px;
 }
 
-.label {
-	width: 300px;
+input {
+	width: 100%;
+	padding: 5px;
+	-webkit-box-sizing: border-box; -moz-box-sizing : border-box;
+	box-sizing : border-box;
+	border: 1px solid #ccc;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-.txtNombre,.txtApellido,.txtArea,.txtEdad,.txtFechaIngreso {
-	margin-left: 90px;
-	width: 200px;
+input[type="submit"] {
+	margin-bottom: 0;
+	background: #1668c4;
+	color: #fff;
+	border: none;
 }
 
-.txtDireccion {
-	margin-left: 83px;
-	width: 250px;
+input[type="submit"]:hover {
+	background: #4A88F4;
+	cursor: pointer;
 }
 
-.txtMail {
-	margin-left: 114px;
-	width: 250px;
-}
-
-.txtSectorEmpr {
-	margin-left: 11px;
-	width: 20px;
-}
-
-.txtSueldoBas {
-	margin-left: 54px;
-	width: 50px;
-}
-
-.txtFechaNac {
-	margin-left: 51px;
-	width: 80px;
-}
-
-.txtNombre,.txtApellido,.txtArea,.txtEdad,.txtFechaIngreso,.txtDireccion,.txtMail,.txtSectorEmpr,.txtSueldoBas,.txtFechaNac
-{
-	font: 15px bold;
-	color: #045FB4;
-}
-
-.texto {
-	color: blue;
-	font-size: 20px;
+#menu{
+	background-color: silver;
 }

@@ -2,52 +2,47 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:f="http://java.sun.com/jsf/core"
-	  xmlns:h="http://java.sun.com/jsf/html"
-	  xmlns:ui="http://java.sun.com/jsf/facelets">
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
 </h:head>
 <h:body>
-	<!-- En este caso, composition indica el layout con que trabaja esta pagina -->
+	<!-- En este caso, "composition" indica el layout con que trabaja esta pagina -->
 	<ui:composition template="/plantillas/plantilla.xhtml">
-		<!-- En este caso, define indica la zona de la plantilla indetificada -->
+		<!-- En este caso, "define" indica la zona de la plantilla indetificada -->
 		<ui:define name="body">
 			<h2>Registro</h2>
-			
-			<h:form id="form">
-				<h:panelGrid id="panel" columns="2" cellpadding="0" cellspacing="2" styleClass="tabla">
-					<f:facet name="header" >
-						<h:outputText value="Registro de Empleado" />
-					</f:facet>
-					
+			<h:form id="form" styleClass="form">
+				<h:panelGrid id="panel" columns="2" styleClass="table">
 					<!-- En este caso, el value invoca a las propiedades del ManagedBean" -->
-					<h:outputLabel value="Nombre" styleClass="label"/>
-					<h:inputText value="#{formulario.empleado.nombre}" styleClass="txtNombre"/>
-					
-					<h:outputLabel value="Apellido" styleClass="label"/>
-					<h:inputText value="#{formulario.empleado.apellido}" styleClass="txtApellido"/>
-					
-					<h:outputLabel value="Area" styleClass="label"/>
-					<h:inputText value="#{formulario.empleado.area}" styleClass="txtArea"/>
-					
-					<h:outputLabel value="Edad" styleClass="label"/>
-					<h:inputText value="#{formulario.empleado.edad}" styleClass="txtEdad" />
-					
-					<h:outputLabel value="Fecha Ingreso" styleClass="label"/>
-					<h:inputText value="#{formulario.empleado.fechaIngreso}" styleClass="txtFechaIngreso">
+					<h:outputLabel value="Nombre" />
+					<h:inputText value="#{formulario.empleado.nombre}" />
+
+					<h:outputLabel value="Apellido" />
+					<h:inputText value="#{formulario.empleado.apellido}" />
+
+					<h:outputLabel value="Area" />
+					<h:inputText value="#{formulario.empleado.area}" />
+
+					<h:outputLabel value="Edad" />
+					<h:inputText value="#{formulario.empleado.edad}" />
+
+					<h:outputLabel value="Fecha Ingreso" />
+					<h:inputText value="#{formulario.empleado.fechaIngreso}">
 						<f:convertDateTime pattern="dd/MM/yyyy" />
 					</h:inputText>
-					
+
 					<!-- En este caso, la acción ejecuta al métodp del ManagedBean -->
 					<h:commandButton value="Procesar" action="#{formulario.procesar}" />
-					
+
 					<!-- En este caso, la acción se llama igual que la pagina final.xhtml -->
-					<h:commandButton value="Continuar" action="final" style="text-align:center" />
+					<h:commandButton value="Continuar" action="final" />
 				</h:panelGrid>
 			</h:form>
 
 			<!-- En este caso, muestra todos los mensajes almacenados -->
-			<h:messages styleClass="msjError" />
+			<h:messages styleClass="msjError"/>
 		</ui:define>
 	</ui:composition>
 </h:body>
